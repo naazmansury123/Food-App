@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#search {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+#contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.meal-card {
+    width: 30%; /* Default width for larger screens */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.meal-card img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .meal-card {
+        width: 100%; /* Full width on small screens */
+    }
+
+    #search {
+        width: 100%; /* Full width for the search input on small screens */
+    }
+}
+
+#mealDetailOverlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+#closeOverlay {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+
+#closeOverlay:hover {
+    background-color: #c82333;
+}
